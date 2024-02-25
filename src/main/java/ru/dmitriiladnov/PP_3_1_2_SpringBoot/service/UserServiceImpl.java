@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.dmitriiladnov.PP_3_1_2_SpringBoot.model.User;
 import ru.dmitriiladnov.PP_3_1_2_SpringBoot.repositories.UserRepository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -23,7 +22,7 @@ public class UserServiceImpl implements UserService{
 
     
     @Override
-    public List<User> findAll() {
+    public Iterable<User> findAll() {
         return userRepository.findAll();
     }
 
@@ -36,12 +35,6 @@ public class UserServiceImpl implements UserService{
     @Override
     @Transactional
     public void save(User user) {
-        userRepository.save(user);
-    }
-
-    @Override
-    @Transactional
-    public void update(User user) {
         userRepository.save(user);
     }
 

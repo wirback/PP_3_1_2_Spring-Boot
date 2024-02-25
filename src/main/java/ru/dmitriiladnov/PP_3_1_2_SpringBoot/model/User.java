@@ -1,7 +1,8 @@
 package ru.dmitriiladnov.PP_3_1_2_SpringBoot.model;
 
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "users_table")
