@@ -6,16 +6,18 @@
 </head>
 <body>
 
-<div th:each="user : ${users}">
-    <a th:href="@{/show(id=${user.getId()})}" th:text="|${user.getName()} ${user.getSurName()}|">user</a>
-</div>
-
 <br>
 <hr>
 
-<a href="/new">
-    <input type="submit" value="Add new User">
+<a href="/admin">
+    <input type="submit" value="Go to ADMIN">
 </a>
+<br><br><br>
+<a href="/user">
+    <input type="submit" value="Go to USER">
+</a>
+
+<hr>
 
 </body>
 </html>
